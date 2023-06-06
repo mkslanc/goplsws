@@ -8,7 +8,7 @@ function launch(socket) {
     const reader = new rpc.WebSocketMessageReader(socket);
     const writer = new rpc.WebSocketMessageWriter(socket);
     const socketConnection = server.createConnection(reader, writer, () => socket.dispose());
-    const serverConnection = server.createServerProcess('JSON', 'C:\\Users\\mks-t\\go\\bin\\gopls', ['-rpc.trace', 'serve']);
+    const serverConnection = server.createServerProcess('JSON', 'gopls', ['-rpc.trace', 'serve']);
     server.forward(socketConnection, serverConnection, message => {
         if (message.method === "initialize") {
             const initializeParams = message.params;

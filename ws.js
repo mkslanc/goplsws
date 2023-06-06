@@ -6,7 +6,7 @@ const wss = new WebSocket.Server({port: 3030});
 
 wss.on('connection', ws => {
     let env = process.env;
-    const gopls = spawn('C:\\Users\\mks-t\\go\\bin\\gopls', ['-mode=stdio', '-remote=auto', 'serve','--debug=localhost:6060'], {
+    const gopls = spawn('gopls', ['-mode=stdio', '-remote=auto', 'serve','--debug=localhost:6060'], {
         env: env
     });
 
