@@ -1,0 +1,10 @@
+{
+  "name": "goplsws",
+  "version": "1.0.0",
+  "dependencies": {
+    "vscode-jsonrpc": "^8.1.0",
+    "vscode-languageserver": "^8.1.0",
+    "vscode-ws-jsonrpc": "^3.0.0",
+    "ws": "^8.13.0"
+  }
+}
